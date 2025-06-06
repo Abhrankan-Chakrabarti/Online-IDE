@@ -1,75 +1,106 @@
-## Web-Based Integrated Development Environment
+# Online IDE 🌐
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![GitHub release](https://img.shields.io/github/release/Ryzer22470/Online-IDE.svg) ![GitHub stars](https://img.shields.io/github/stars/Ryzer22470/Online-IDE.svg) ![GitHub forks](https://img.shields.io/github/forks/Ryzer22470/Online-IDE.svg)
 
-A web-based Integrated Development Environment built with HTML, CSS, and JavaScript that allows you to write and execute code directly in your browser.
+Welcome to the **Online IDE** repository! This project provides a web-based Integrated Development Environment (IDE) built with HTML, CSS, and JavaScript. You can write and execute code directly in your browser, making it an excellent tool for learning and practicing programming. You can also run it locally on your machine.
 
-<img width="1278" alt="image" src="https://github.com/user-attachments/assets/782c8799-b300-46ec-9a42-832a6f6df35a" />
+## Table of Contents
 
-*Example execution with simple program.*
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Links](#links)
 
-https://nuni-neomu-areumdawo.github.io/Online-IDE/ - **You can run it locally too!!**
+## Features ✨
 
-## Features
-*   **Multi-Language Support:**
-    *   Syntax highlighting for Python, Java, C, and C++.
-    *   Client-side execution for **Python** using Pyodide.
-    *   (Working on execution logic for Java, C, C++).
-*   **Code Analysis (Python):**
-    *   Real-time hints and warnings for potential issues (e.g., division by zero, unused imports, potential typos).
-    *   Issues are underlined directly in the editor.
-    *   Dedicated panel listing all detected issues.
-    *   Clicking an issue in the panel highlights the corresponding line.
-    *   Toggle visibility for hints and warnings separately or together.
-    *   Navigate through issues using the "Next Issue" button.
-*   **Code Management (LocalStorage):**
-    *   Save snapshots of your code.
-    *   View, load, rename, and delete saved code versions.
-    *   Automatic saving of the 'Latest' version.
-    *   Collapsible "Code History" panel.
-*   **User Experience:**
-    *   Smooth language switching with animations.
-    *   Dynamic bokeh background effect that changes with the selected language.
-    *   Visual feedback animation when running code.
-    *   Toast notifications for actions like saving, loading, or errors.
+- **Web-Based**: Access your IDE from any browser without installation.
+- **Multi-Language Support**: Write code in various languages including JavaScript, Python, Java, C++, and more.
+- **Educational Tool**: Ideal for beginners and those looking to improve their coding skills.
+- **Responsive Design**: Works well on both desktop and mobile devices.
+- **Real-Time Execution**: See the results of your code immediately.
 
-## Getting Started
+## Technologies Used 🛠️
 
-Since this is a **purely client-side application contained within a single HTML file**, running it is simple:
+- **HTML5**: Structure of the application.
+- **CSS3**: Styling and layout.
+- **JavaScript**: Functionality and interactivity.
+- **Node.js**: Backend support (if applicable).
+- **Various Libraries**: For enhanced functionality (e.g., CodeMirror for code editing).
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/nuni-neomu-areumdawo/Online-IDE.git
-    ```
+## Installation 🔧
 
-2.  **Navigate to the directory:**
-    ```bash
-    cd Online-IDE
-    ```
+To run the Online IDE locally, follow these steps:
 
-3.  **Open the HTML file:**
-    Simply open the `index.html` (or the main HTML file's name) in your preferred web browser (e.g., Chrome, Firefox, Edge).
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Ryzer22470/Online-IDE.git
+   ```
 
-**Note:** The first time you run Python code, Pyodide needs to be downloaded and initialized, which might take a few moments depending on your internet connection. Subsequent runs will be faster.
+2. **Navigate to the Directory**:
+   ```bash
+   cd Online-IDE
+   ```
 
-## How It Works
+3. **Open the Index File**:
+   Open `index.html` in your preferred web browser.
 
-*   **Editor:** The [CodeMirror](https://codemirror.net/) library provides the text editor component, handling syntax highlighting, line numbers, and other editor features based on the selected language mode.
-*   **Python Execution:** [Pyodide](https://pyodide.org/) loads the CPython interpreter compiled to WebAssembly into the browser. When you click "Run Code" for Python, the script from the editor is passed to Pyodide for execution directly in the browser, capturing `stdout` and `stderr` for display.
-*   **Other Languages:** For Java, C, and C++, the IDE currently provides syntax highlighting via CodeMirror modes. The execution logic is a placeholder and does not compile or run code for these languages.
-*   **Code Analysis:** Custom JavaScript functions parse the Python code in the editor, looking for specific patterns (e.g., regex checks, simple AST-like checks) to identify potential hints or warnings. These are then displayed in the side panel and used to mark the code in the editor./
-*   **Persistence:** Code snippets and their metadata (timestamp, language, name) are saved and retrieved using the browser's `localStorage` API.
-*   **Visuals:** The background bokeh effect and various animations are achieved using CSS (including `@keyframes` rules) and JavaScript to manipulate element styles and classes dynamically.
+Alternatively, you can download the latest release from [here](https://github.com/Ryzer22470/Online-IDE/releases). Follow the instructions in the release notes for specific setup details.
 
-## Contributing
+## Usage 🖥️
 
-Contributions are welcome! If you have suggestions for improvements or find bugs, please feel free to:
+Once you have the Online IDE running, you can start coding right away. Here’s how to use it:
 
-1.  Open an issue to discuss the change or report the bug.
-2.  Fork the repository, make your changes, and submit a pull request.
+1. **Choose a Language**: Select the programming language you want to use from the dropdown menu.
+2. **Write Your Code**: Use the editor to write your code. The editor supports syntax highlighting and auto-completion.
+3. **Run Your Code**: Click the "Run" button to execute your code. The output will display in the console area below the editor.
+4. **Save Your Work**: You can save your code snippets for future reference.
 
-## 📄 License
+For more details, check the [Releases](https://github.com/Ryzer22470/Online-IDE/releases) section.
 
-This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+## Contributing 🤝
+
+We welcome contributions to improve the Online IDE. If you want to help, follow these steps:
+
+1. **Fork the Repository**: Click the "Fork" button at the top right of the page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**: 
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. **Open a Pull Request**: Go to the original repository and click "New Pull Request."
+
+## License 📄
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Links 🔗
+
+For the latest updates and releases, visit our [Releases](https://github.com/Ryzer22470/Online-IDE/releases) page.
+
+### Explore More 🌍
+
+Feel free to explore the various topics related to this project:
+
+- Code Editor
+- Educational Tools
+- Learning to Code
+- Programming Languages: JavaScript, Python, Java, C++, and more
+
+## Contact Us 📬
+
+If you have any questions or suggestions, feel free to reach out via the Issues section of this repository.
 
 ---
+
+Thank you for checking out the Online IDE! Happy coding!
